@@ -4,15 +4,19 @@ import java.util.Arrays;
 import java.util.List;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
+import org.bukkit.Server;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
+import org.bukkit.command.PluginCommand;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.InventoryView;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 
@@ -110,6 +114,9 @@ public final class FixedPhrasePlugin extends JavaPlugin implements Listener {
     @EventHandler
     public void onInventoryClickEvent(InventoryClickEvent event){
         Player p =(Player)event.getWhoClicked();
+        if(event.getClickedInventory() == event.getWhoClicked().getInventory()) {
+            return;
+        }
         if (event.getView().getTopInventory().getTitle().equals("定型文")) {
             switch (event.getCurrentItem().getType()) {
                 case COAL:

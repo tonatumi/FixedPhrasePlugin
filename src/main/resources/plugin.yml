@@ -1,8 +1,8 @@
 name: FixedPhrasePlugin
 version: ${project.version}
 main: com.gmail.tonatumi.fixedphraseplugin.FixedPhrasePlugin
-command:
+commands:
   fpp:
-    description: fpp で定型文リストを開きます。
+    description: open Fixed Phrase GUI
     usage: /<command>
     default: true
