@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="FixedPhrasePlugin">
+    <output-path>$PROJECT_DIR$/out/artifacts/FixedPhrasePlugin</output-path>
+    <root id="archive" name="FixedPhrasePlugin.jar">
+      <element id="module-output" name="FixedPhrasePlugin" />
+    </root>
+  </artifact>
+</component>
